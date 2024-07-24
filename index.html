@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Garden</title>
+    <meta name="description" content="Green Garden es un restaurante en La Plata que ofrece una experiencia gastronómica única con ingredientes frescos y recetas deliciosas.">
+    <meta name="keywords" content="Green Garden, restaurante, La Plata, gastronomía, menú, galería, ubicación, contacto">
+    <meta name="author" content="Martin Romero">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</head>
+<body>
+    <header role="banner">
+        <img src="/images/logo.png" alt="Logo de Green Garden" id="logo">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservations">Política de Reservas</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#location">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="about">
+            <h2>Nosotros</h2>
+            <p>Bienvenidos a Green Garden, un lugar donde la calidad se encuentran. En nuestro restaurante, nos especializamos en ofrecer una experiencia gastronómica única con ingredientes frescos y recetas deliciosas.</p>
+        </section>
+        <section id="menu">
+            <h2>Menú</h2>
+            <button onclick="window.open('menu.pdf')">Ver Menú</button>
+        </section>
+        <section id="reservations">
+            <h2>Política de Reservas</h2>
+            <p>Aquí irá el texto de la política de reservas.</p>
+        </section>
+        <section id="gallery">
+            <h2>Galería</h2>
+            <p>Explora nuestra galería de imágenes para ver algunos de nuestros platos y el ambiente acogedor de Green Garden.</p>
+            <a href="gallery.html" class="button">Ir a la Galería</a>
+        </section>
+        <section id="reviews">
+            <h2>Reseñas</h2>
+            <p>Descubre lo que nuestros clientes dicen sobre Green Garden:</p>
+            <div id="reviews-container">
+                <p>Aquí se mostrarán las reseñas de Google.</p>
+            </div>
+            <p>¡Nos encantaría saber tu opinión! Deja tu reseña en <a href="https://www.google.com/search?q=Green+Garden+La+Plata" target="_blank">Google</a>.</p>
+        </section>
+        <section id="location">
+            <h2>Ubicación</h2>
+            <div id="map-container" style="height: 400px; width: 100%;"></div>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <div class="footer-icons">
+            <a href="https://instagram.com/greengardenlaplata/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="tel:+5402214895239">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Green Garden. Todos los derechos reservados.</p>
+        <p>Desarrollado por Martin Romero</p>
+    </footer>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('/images/greengardenfondo.jpg') no-repeat center center fixed; /* Imagen de fondo añadida */
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background: rgba(42, 107, 47, 0.95); /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto en el header */
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fijar el header en la parte superior */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+}
+
+header #logo {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* Blanco para el texto de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D0F1D3; /* Verde Pasto */
+}
+
+main {
+    background: rgba(255, 255, 255, 0.30);
+    padding: 20px; /* Ajustado a 30px */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-top: 130px; /* Espacio para evitar el solapamiento con el header fijo */
+}
+
+section {
+    background: rgba(255, 255, 255, 0.90);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+    text-align: center; /* Alineación central del texto en las secciones */
+}
+
+section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    border-bottom: 2px solid #4A9A5A; /* Verde Hoja */
+    padding-bottom: 10px;
+    color: #2C6B2F; /* Verde Bosque */
+}
+
+h3 {
+    margin-top: 20px;
+    color: #2C6B2F; /* Verde Bosque */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos en el centro horizontal */
+}
+
+form label, form input, form textarea, form button {
+    width: 100%; /* Asegurar que los elementos ocupen el 100% del contenedor */
+    max-width: 400px; /* Limitar el ancho máximo para el formulario */
+}
+
+form label {
+    margin-top: 10px;
+    color: #2C6B2F; /* Verde Bosque */
+}
+
+form input, form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4A9A5A; /* Verde Hoja */
+    border-radius: 4px;
+    background: #D0F1D3; /* Verde Pasto */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #2C6B2F; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+    text-align: center; /* Alineación central del texto en el botón */
+}
+
+form button:hover {
+    background: #4A9A5A; /* Verde Hoja */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón en la sección de menú */
+#menu button {
+    background: #2C6B2F; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center; /* Alineación central del texto en el botón */
+}
+
+#menu button:hover {
+    background: #4A9A5A; /* Verde Hoja */
+}
+
+/* Estilo del botón en la sección de galería */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2C6B2F; /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto del botón */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center; /* Alineación central del texto en el botón */
+}
+
+.button:hover {
+    background: #4A9A5A; /* Verde Hoja */
+}
+
+/* Estilo para las imágenes de la galería */
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Alinear las imágenes al centro */
+}
+
+.gallery-images img {
+    width: calc(50% - 10px);
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#reviews {
+    background: rgba(255, 255, 255, 0.90);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#reviews h2 {
+    text-align: center;
+}
+
+#reviews p {
+    text-align: center;
+}
+
+#reviews a {
+    color: #2C6B2F; /* Verde Bosque */
+    font-weight: bold;
+}
+
+#reviews a:hover {
+    color: #4A9A5A; /* Verde Hoja */
+}
+
+@media (max-width: 768px) {
+    .gallery-images img {
+        width: calc(100% - 10px);
+    }
+}
+
+footer {
+    background: rgba(42, 107, 47, 0.9); /* Verde Bosque */
+    color: #FFFFFF; /* Blanco para el texto del footer */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los iconos del footer */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FFFFFF; /* Borde blanco */
+    border-radius: 50%;
+    background: transparent; /* Fondo transparente */
+    color: #FFFFFF; /* Color del icono */
+    text-align: center;
+    line-height: 40px; /* Alinea el icono verticalmente */
+    margin: 0 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-icons a {
+    color: #FFFFFF; /* Blanco para los íconos */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #D0F1D3; /* Verde Pasto */
+}
+
+.footer-icon i {
+    font-size: 20px; /* Tamaño del icono */
+    border: 2px solid #FFFFFF; /* Bordes blancos para los íconos */
+    border-radius: 50%;
+    padding: 8px;
+    background: transparent; /* Fondo transparente */
+}
+
+.footer-icon:hover {
+    background: #FFFFFF; /* Fondo blanco al pasar el mouse */
+    color: #2C6B2F; /* Verde Bosque para el icono al pasar el mouse */
+}
+
+/* Estilos generales para la galería */
+#gallery {
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+    color: #2C6B2F; /* Verde Bosque */
+}
+
+h3 {
+    margin-top: 30px;
+}
