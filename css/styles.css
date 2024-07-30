@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: url('/images/greengardenfondo.jpg') no-repeat center center fixed; /* Imagen de fondo añadida */
+    background: url('../images/greengardenfondo.jpg') no-repeat center center fixed; /* Imagen de fondo añadida */
     background-size: cover;
     color: #333;
 }
