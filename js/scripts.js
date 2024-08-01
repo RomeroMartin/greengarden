@@ -11,3 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewsContainer = document.getElementById('reviews-container');
     reviewsContainer.innerHTML = '<p>Aquí irán las reseñas del lugar.</p>';
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerHeight = document.querySelector('header').offsetHeight;
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
