@@ -6,6 +6,7 @@ body {
     background: url('../images/greengardenfondo.jpg') no-repeat center center fixed; /* Imagen de fondo añadida */
     background-size: cover;
     color: #333;
+    margin-top: 160px;
 }
 
 header {
@@ -138,6 +139,24 @@ h3 {
 .button:hover {
     background: #4A9A5A; /* Verde Hoja */
 }
+
+/* Asegurarse de que los puntos no aparezcan en las listas dentro de la sección de reservas */
+#reservations ul {
+    list-style-type: none; /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+}
+
+#reservations ul li {
+    text-align: center; /* Centra el texto dentro de los <li> */
+    margin: 10px 0; /* Ajusta el espaciado vertical entre los elementos */
+}
+
+/* Si es necesario centrar también el texto dentro del contenedor */
+#reservations {
+    text-align: center; /* Alinea todo el contenido del contenedor al centro */
+}
+
 
 /* Estilo para las imágenes de la galería */
 .gallery-images {
