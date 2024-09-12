@@ -23,7 +23,7 @@ header {
 }
 
 header #logo {
-    max-width: 100px;
+    max-width: 200px;
     margin: 0 auto;
     display: block;
 }
@@ -40,7 +40,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFFFFF; /* Blanco para el texto de los enlaces */
+    color: #000; /* Blanco para el texto de los enlaces */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
