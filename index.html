@@ -1,94 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Garden</title>
-    <meta name="description" content="Green Garden es un restaurante en La Plata que ofrece una experiencia gastronómica única con ingredientes frescos y recetas deliciosas.">
-    <meta name="keywords" content="Green Garden, restaurante, La Plata, gastronomía, menú, galería, ubicación, contacto">
-    <meta name="author" content="Martin Romero">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="/images/favicon.jpeg" type="image/png">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <!-- Configuración básica -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Garden - Nuestra casa, tu lugar.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Green Garden - Restaurante en Córdoba. Nuestra casa, tu lugar: platos caseros, sabores frescos y un ambiente único para compartir.">
+  <meta name="keywords" content="Green Garden, restaurante Córdoba, comida casera, sabores frescos, gastronomía, almuerzo, cena, delivery, reservas">
+  <meta name="author" content="Green Garden">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Green Garden - Nuestra casa, tu lugar.">
+  <meta property="og:description" content="Platos caseros, sabores frescos y un ambiente único en Córdoba.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://greengarden.com.ar">
+  <meta property="og:image" content="https://greengarden.com.ar/GreenGarden/img/Logo.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Green Garden - Nuestra casa, tu lugar.">
+  <meta name="twitter:description" content="Platos caseros, sabores frescos y un ambiente único en Córdoba.">
+  <meta name="twitter:image" content="https://greengarden.com.ar/greengarden/img/Logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
-    <header role="banner">
-        <img src="images/logo.png" alt="Logo de Green Garden" id="logo">
-        <nav role="navigation">
-            <ul>
-                <li><a href="#about">Nosotros</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#reservations">Reservas</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#reviews">Reseñas</a></li>
-                <li><a href="#location">Ubicación</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main role="main">
-        <section id="about">
-            <h2>Nosotros</h2>
-            <p>Bienvenidos a Green Garden, donde desde 2016 nos dedicamos a ofrecer una experiencia gastronómica única en La Plata. Cada detalle en nuestras recetas y sistemas de cocción es cuidadosamente pensado para brindarte lo mejor.</p>
-            <p>Ubicados en Diag 74 e/49 y 50, nuestras instalaciones cuentan con un moderno primer piso de producción, equipado con cámaras de frío, un sector de envasado al vacío, y áreas de producción específicas. Pronto, añadiremos una panadería artesanal a nuestras instalaciones.</p>
-            <p>Nuestro amplio menú abarca todas las comidas del día: desayuno, almuerzo, merienda y cena, siempre con materias primas de primera calidad. Trabajamos con marcas y proveedores de excelencia para mantener nuestras recetas en el más alto nivel.</p>
-            <p>Además, contamos con maquinaria gastronómica de última tecnología, que incluye hornos, parrillas y sistemas de cocción avanzados, asegurando estándares de seguridad y eficacia en cada plato.</p>
-            <p>En Green Garden, nuestros clientes son como familia. Por eso, hemos creado un espacio especial para niños, con una variedad de juegos para todas las edades, cuidado de niñeras y vigilancia por cámaras de seguridad, accesibles para los adultos a través de tablets y celulares.</p>
-        </section>
-        <section id="menu">
-            <h2>Menú</h2>
-            <p>En Green Garden, te invitamos a disfrutar de una experiencia gastronómica completa a cualquier hora del día. Nuestro menú está diseñado para ofrecerte opciones deliciosas y frescas desde el desayuno hasta la cena.</p>
-            <button onclick="window.open('https://drive.google.com/file/d/1KkRWpTJIxMTui4Ol9Gx0MHQJU_DPrYhS/preview', '_blank')">Ver Menú</button>
-        </section>
-        <section id="reservations">
-            <h2>Reservas</h2>
-            <p>En Green Garden, nos complace ofrecerte una experiencia gastronómica inolvidable y para asegurar que tu visita sea perfecta, te invitamos a realizar una reserva con antelación al siguiente numero telefonico <strong>0221-4895239</strong>.</p>
-            <p><strong>Política de Reservas:</strong></p>
-            <ul>
-                <li><strong>Almuerzo:</strong> Las reservas para el almuerzo se toman a partir de las 12:00, con un margen de tolerancia de 15 minutos. Si llegas después de este período, tu mesa será asignada en función de la disponibilidad.</li>
-                <li><strong>Cena:</strong> Las reservas para la cena están disponibles a partir de las 20:00, también con un margen de tolerancia de 15 minutos. Al igual que en el almuerzo, si llegas fuera de este período, te asignaremos una mesa según la disponibilidad.</li>
-            </ul>
-            <p>Fuera de estos horarios, las mesas se asignan por orden de llegada.</p>
-            <p>Te recomendamos realizar tu reserva con anticipación para garantizar tu lugar y disfrutar de nuestra experiencia gastronómica en el horario que prefieras. ¡Esperamos verte pronto!</p>
-        </section>
-        <section id="gallery">
-            <h2>Galería</h2>
-            <p>Te invitamos a explorar y disfrutar de una selección de imágenes que capturan la esencia de nuestro restaurante.</p>
-            <p>Descubre los diversos rincones de Green Garden, desde nuestro acogedor salón hasta el vibrante espacio para los más pequeños. También podrás ver la presentación impecable de nuestros platos, cada uno elaborado con ingredientes frescos y de alta calidad.</p>
-            <a href="gallery.html" class="button">Ir a la Galería</a>
-        </section>
-        <section id="reviews">
-            <h2>Reseñas</h2>
-            <p>¡Nos encantaría conocer tu opinión sobre tu experiencia en Green Garden! Tus comentarios son muy importantes para nosotros y nos ayudan a seguir mejorando y ofreciendo el mejor servicio posible.</p>
-            <p>¡Nos encantaría saber tu opinión! Deja tu reseña en <a href="https://www.google.com/search?q=Green+Garden+La+Plata#lrd=0x95a2e6319811f375:0x8e3aeea2b2c70bdc,1,,,," target="_blank">Google</a>.</p>
-        </section>
-        <section id="location">
-            <h2>Ubicación</h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2313.3225345520523!2d-57.955662423887134!3d-34.91818982206598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e6319811f375%3A0x8e3aeea2b2c70bdc!2sGreen%20Garden%20-%20La%20Plata!5e0!3m2!1ses!2sar!4v1722474965322!5m2!1ses!2sar"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                ></iframe>
-            </div>
-        </section>
-    </main>
-    <footer role="contentinfo">
-        <div class="footer-icons">
-            <a href="https://instagram.com/greengardenlaplata/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="tel:+5402214895239">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
-        <p>&copy; 2024 Green Garden. Todos los derechos reservados.</p>
-        <p>Desarrollado por Martin Romero</p>
-    </footer>
-    <script src="js/scripts.js"></script>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Green Garden Logo">
+        </a>
+      </div>
+
+      <!-- Menú escritorio -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#menu">Menú Digital</a></li>
+        <li><a href="#tiendas">Tiendas</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#franquicias">Franquicias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu">
+      <button class="close-btn">×</button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#menu">Menú Digital</a></li>
+        <li><a href="#tiendas">Tiendas</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#franquicias">Franquicias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="social">
+        <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
 </body>
 </html>
