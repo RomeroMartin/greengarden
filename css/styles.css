@@ -73,11 +73,13 @@ body {
   width: 100%;
   height: 100%;
   background: #fff;
-  transition: 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* para que arranque desde arriba */
   align-items: center;
+  z-index: 2000; /* aseguramos que esté por encima de todo */
+  padding-top: 2rem;
 }
 
 .mobile-menu.active {
@@ -87,6 +89,7 @@ body {
 .mobile-menu ul {
   list-style: none;
   text-align: center;
+  margin-top: 2rem; /* separa los links de la X */
 }
 
 .mobile-menu ul li {
@@ -102,16 +105,15 @@ body {
 
 /* Botón cerrar (X) */
 .close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #333;
   background: none;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+  z-index: 2100; /* por encima del menú */
+  margin-bottom: 1rem; /* espacio entre la X y los links */
 }
 
 .close-btn:hover {
