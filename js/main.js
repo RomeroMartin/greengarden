@@ -16,8 +16,6 @@ closeBtn.addEventListener('click', () => {
 // Slider automático + manual
 let slides = document.querySelectorAll('.slide');
 let dots = document.querySelectorAll('.dot');
-let prevBtn = document.querySelector('.prev');
-let nextBtn = document.querySelector('.next');
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 5000);
 
@@ -37,18 +35,6 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
-// Manual con flechas
-nextBtn.addEventListener('click', () => {
-  nextSlide();
-  resetInterval();
-});
-
-prevBtn.addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-  resetInterval();
-});
-
 // Manual con puntos
 dots.forEach((dot, i) => {
   dot.addEventListener('click', () => {
@@ -57,7 +43,7 @@ dots.forEach((dot, i) => {
   });
 });
 
-// Reset intervalo al tocar flechas o puntos
+// Reset intervalo al tocar puntos
 function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, 5000);

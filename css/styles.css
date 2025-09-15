@@ -19,19 +19,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.5); /* más transparente */
-  backdrop-filter: blur(6px); /* efecto vidrio */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #eee;
-  height: 12vh; /* ocupa un 12% del banner */
+  height: 12vh;
 }
 
 .logo img {
-  height: 80px;
-  max-height: 90px;
+  height: 90px;
+  max-height: 100px;
 }
 
 /* Menú escritorio */
@@ -39,6 +39,8 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
+  justify-content: center;
+  flex: 1;
 }
 
 .nav-links li a {
@@ -49,7 +51,19 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #6bbf59; /* Verde Green Garden */
+  color: #6bbf59;
+}
+
+/* Iconos escritorio */
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-icons img {
+  width: 26px;
+  height: 26px;
+  filter: invert(0); /* negro */
 }
 
 /* Botón hamburguesa */
@@ -78,9 +92,9 @@ body {
   transition: right 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* arranca desde arriba */
+  justify-content: flex-start;
   align-items: center;
-  z-index: 2000; /* encima de todo */
+  z-index: 2000;
   padding-top: 2rem;
 }
 
@@ -91,7 +105,7 @@ body {
 .mobile-menu ul {
   list-style: none;
   text-align: center;
-  margin-top: 2rem; /* separa links de la X */
+  margin-top: 2rem;
 }
 
 .mobile-menu ul li {
@@ -114,8 +128,8 @@ body {
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
-  z-index: 2100; /* por encima del menú */
-  margin-bottom: 1rem; /* espacio entre la X y los links */
+  z-index: 2100;
+  margin-bottom: 1rem;
 }
 
 .close-btn:hover {
@@ -125,17 +139,26 @@ body {
 /* Redes sociales en menú mobile */
 .social {
   margin-top: 2rem;
-  display: flex;
-  gap: 1.5rem;
 }
 
 .social img {
   width: 30px;
+  filter: invert(0); /* negro */
+}
+
+/* Logo al fondo del menú móvil */
+.mobile-logo {
+  margin-top: auto;
+  padding-bottom: 2rem;
+}
+
+.mobile-logo img {
+  height: 70px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .nav-links {
+  .nav-links, .nav-icons {
     display: none;
   }
 
@@ -152,9 +175,9 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: 90vh; /* 90% de la pantalla */
   overflow: hidden;
-  margin-top: 0; /* ajustado con navbar encima */
+  margin-top: 0;
 }
 
 .slider {
@@ -180,33 +203,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Flechas slider */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 2rem;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.prev:hover, .next:hover {
-  background: rgba(0,0,0,0.7);
-}
-
-.prev {
-  left: 20px;
-}
-
-.next {
-  right: 20px;
 }
 
 /* Indicadores (puntos) */
