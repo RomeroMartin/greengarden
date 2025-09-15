@@ -18,13 +18,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.4); /* más transparente */
+  background: rgba(255, 255, 255, 0.25); /* más transparente */
   backdrop-filter: blur(6px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #eee;
   height: 12vh;
 }
 
@@ -63,6 +62,12 @@ body {
   width: 26px;
   height: 26px;
   filter: invert(0); /* negro */
+  transition: all 0.3s ease;
+}
+
+.nav-icons img:hover {
+  filter: invert(29%) sepia(91%) saturate(355%) hue-rotate(76deg) brightness(93%) contrast(92%);
+  transform: scale(1.1);
 }
 
 /* Botón hamburguesa */
@@ -143,6 +148,12 @@ body {
 .social img {
   width: 30px;
   filter: invert(0); /* negro */
+  transition: all 0.3s ease;
+}
+
+.social img:hover {
+  filter: invert(29%) sepia(91%) saturate(355%) hue-rotate(76deg) brightness(93%) contrast(92%);
+  transform: scale(1.1);
 }
 
 /* Logo al fondo del menú móvil */
