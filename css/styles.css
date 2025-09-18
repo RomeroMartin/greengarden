@@ -327,11 +327,19 @@ body {
 @media (max-width: 900px) {
   .menu-row,
   .menu-row.reverse {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
+  /* Fotos en 2 columnas aunque sea mobile */
   .menu-images {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Para que los botones no queden tan grandes en mobile */
+  .btn-menu {
+    width: fit-content;
+    margin: 0 auto;
   }
 }
-
