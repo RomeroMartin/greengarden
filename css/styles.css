@@ -248,3 +248,90 @@ body {
 .dot.active {
   background: rgba(255,255,255,1);
 }
+
+/* ============================= */
+/* SECCIÓN MENÚ */
+/* ============================= */
+.menu-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* imágenes ocupan el doble */
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.menu-row.reverse {
+  grid-template-columns: 1fr 2fr; /* invertimos para merienda */
+}
+
+.menu-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.menu-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.menu-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.menu-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Botón */
+.btn-menu {
+  display: inline-block;
+  background: #6bbf59;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-menu:hover {
+  background: #57a348;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-row,
+  .menu-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-images {
+    grid-template-columns: 1fr;
+  }
+}
+
