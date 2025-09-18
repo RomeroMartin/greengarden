@@ -1,50 +1,60 @@
-// Seleccionamos elementos
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.close-btn');
+// ==== NAV MOBILE ==== //
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-btn");
 
-// Abrir menú
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
 });
 
-// Cerrar menú
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
 });
 
-// Slider automático + manual
-let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-let slideInterval = setInterval(nextSlide, 5000);
+// cerrar el menú cuando se hace clic en un enlace
+const mobileLinks = document.querySelectorAll(".mobile-menu a");
+mobileLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});
 
-function showSlide(index) {
+// ==== BANNER ==== //
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slides img");
+const dotsContainer = document.querySelector(".dots");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+function showSlide(n) {
+  slideIndex = (n + slides.length) % slides.length;
   slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    dots[i].classList.remove('active');
+    slide.style.display = i === slideIndex ? "block" : "none";
   });
-  slides[index].classList.add('active');
-  dots[index].classList.add('active');
-  currentSlide = index;
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === slideIndex);
+  });
 }
 
-// Automático
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+function currentSlide(n) {
+  showSlide(n);
 }
 
-// Manual con puntos
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    showSlide(i);
-    resetInterval();
-  });
+function plusSlides(n) {
+  showSlide(slideIndex + n);
+}
+
+// Crear dots dinámicos
+slides.forEach((_, i) => {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  dot.addEventListener("click", () => currentSlide(i));
+  dotsContainer.appendChild(dot);
 });
 
-// Reset intervalo al tocar puntos
-function resetInterval() {
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, 5000);
-}
+prev.addEventListener("click", () => plusSlides(-1));
+next.addEventListener("click", () => plusSlides(1));
+
+// Inicializar
+showSlide(slideIndex);
