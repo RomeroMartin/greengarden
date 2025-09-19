@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-
 /* Scroll suave en toda la web */
 html {
   scroll-behavior: smooth;
@@ -266,11 +265,16 @@ body {
   gap: 4rem;
 }
 
+/* Nuevo contenedor con fondo unificado */
 .menu-row {
   display: grid;
   grid-template-columns: 2fr 1fr; /* imágenes ocupan el doble */
   align-items: stretch;
   gap: 1.5rem;
+  background: #f9f9f9; /* Fondo tenue */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .menu-row.reverse {
@@ -294,10 +298,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #f9f9f9;
   border-radius: 12px;
-  padding: 2rem;
   text-align: center;
+  padding: 1rem;
+  background: transparent; /* 🔑 ya no necesita fondo */
 }
 
 .menu-info h2 {
@@ -345,6 +349,90 @@ body {
 
   /* Para que los botones no queden tan grandes en mobile */
   .btn-menu {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+/* ============================= */
+/* SECCIÓN PLAYROOM */
+/* ============================= */
+.playroom-section {
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.playroom-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: stretch;
+  gap: 1.5rem;
+  background: #f9f9f9; /* Fondo de la tarjeta */
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.playroom-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.playroom-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.playroom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.playroom-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.playroom-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.btn-playroom {
+  display: inline-block;
+  background: #6bbf59;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-playroom:hover {
+  background: #57a348;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .playroom-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .playroom-images {
+    grid-template-columns: 1fr 1fr; /* 2 fotos en mobile también */
+  }
+
+  .btn-playroom {
     width: fit-content;
     margin: 0 auto;
   }
