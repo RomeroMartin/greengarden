@@ -15,6 +15,7 @@ html {
 /* Fuente global */
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #FAFAF5; /* ✅ color hueso en vez de blanco puro */
 }
 
 /* Navbar */
@@ -51,7 +52,7 @@ body {
   font-weight: 500;
   color: #000000;
   transition: color 0.2s ease, transform 0.3s ease;
-  display: inline-block; /* ✅ necesario para que funcione transform */
+  display: inline-block;
 }
 
 .nav-links li a:hover {
@@ -68,7 +69,7 @@ body {
 .nav-icons img {
   width: 26px;
   height: 26px;
-  filter: invert(0); /* negro */
+  filter: invert(0);
   transition: all 0.3s ease;
 }
 
@@ -154,7 +155,7 @@ body {
 
 .social img {
   width: 30px;
-  filter: invert(0); /* negro */
+  filter: invert(0);
   transition: all 0.3s ease;
 }
 
@@ -200,7 +201,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 97vh; /* 97% de la pantalla */
+  height: 97vh;
   overflow: hidden;
   margin-top: 0;
 }
@@ -265,20 +266,19 @@ body {
   gap: 4rem;
 }
 
-/* Nuevo contenedor con fondo unificado */
 .menu-row {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* imágenes ocupan el doble */
+  grid-template-columns: 2fr 1fr;
   align-items: stretch;
   gap: 1.5rem;
-  background: #f9f9f9; /* Fondo tenue */
+  background: #f9f9f9;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* ✅ sombra leve estilo Material */
 }
 
 .menu-row.reverse {
-  grid-template-columns: 1fr 2fr; /* invertimos para merienda */
+  grid-template-columns: 1fr 2fr;
 }
 
 .menu-images {
@@ -301,7 +301,7 @@ body {
   border-radius: 12px;
   text-align: center;
   padding: 1rem;
-  background: transparent; /* 🔑 ya no necesita fondo */
+  background: transparent;
 }
 
 .menu-info h2 {
@@ -316,7 +316,6 @@ body {
   color: #555;
 }
 
-/* Botón */
 .btn-menu {
   display: inline-block;
   background: #6bbf59;
@@ -342,12 +341,10 @@ body {
     gap: 1.5rem;
   }
 
-  /* Fotos en 2 columnas aunque sea mobile */
   .menu-images {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Para que los botones no queden tan grandes en mobile */
   .btn-menu {
     width: fit-content;
     margin: 0 auto;
@@ -367,9 +364,10 @@ body {
   grid-template-columns: 2fr 1fr;
   align-items: stretch;
   gap: 1.5rem;
-  background: #f9f9f9; /* Fondo de la tarjeta */
+  background: #f9f9f9;
   border-radius: 12px;
   padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* ✅ sombra leve estilo Material */
 }
 
 .playroom-images {
@@ -429,7 +427,7 @@ body {
   }
 
   .playroom-images {
-    grid-template-columns: 1fr 1fr; /* 2 fotos en mobile también */
+    grid-template-columns: 1fr 1fr;
   }
 
   .btn-playroom {
