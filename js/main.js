@@ -21,40 +21,42 @@ mobileLinks.forEach(link => {
 
 // ==== BANNER ==== //
 let slideIndex = 0;
-const slides = document.querySelectorAll(".slides img");
-const dotsContainer = document.querySelector(".dots");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const prevArrow = document.querySelector(".prev");
+const nextArrow = document.querySelector(".next");
 
 function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
+
   slides.forEach((slide, i) => {
-    slide.style.display = i === slideIndex ? "block" : "none";
+    slide.classList.toggle("active", i === slideIndex);
   });
-  const dots = document.querySelectorAll(".dot");
+
   dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === slideIndex);
   });
 }
 
-function currentSlide(n) {
-  showSlide(n);
-}
-
-function plusSlides(n) {
-  showSlide(slideIndex + n);
-}
-
-// Crear dots dinámicos
-slides.forEach((_, i) => {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  dot.addEventListener("click", () => currentSlide(i));
-  dotsContainer.appendChild(dot);
+// Cambiar slide con puntos
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    showSlide(i);
+  });
 });
 
-prev.addEventListener("click", () => plusSlides(-1));
-next.addEventListener("click", () => plusSlides(1));
+// Cambiar slide con flechas
+prevArrow.addEventListener("click", () => {
+  showSlide(slideIndex - 1);
+});
+nextArrow.addEventListener("click", () => {
+  showSlide(slideIndex + 1);
+});
+
+// Cambio automático cada 5 segundos
+setInterval(() => {
+  showSlide(slideIndex + 1);
+}, 5000);
 
 // Inicializar
 showSlide(slideIndex);

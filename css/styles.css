@@ -255,6 +255,33 @@ body {
   background: rgba(255,255,255,1);
 }
 
+/* Flechas del slider */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+  user-select: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+  color: #6bbf59; /* verde al pasar el mouse */
+}
+
+.prev {
+  left: 25px;
+}
+
+.next {
+  right: 25px;
+}
+
+
 /* ============================= */
 /* SECCIÓN MENÚ */
 /* ============================= */
