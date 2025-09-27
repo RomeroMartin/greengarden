@@ -22,9 +22,24 @@ mobileLinks.forEach(link => {
 // ==== BANNER ==== //
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
-const prevArrow = document.querySelector(".prev");
-const nextArrow = document.querySelector(".next");
+const dotsContainer = document.querySelector(".indicators");
+let dots = [];
+
+// Generar puntitos según la cantidad de slides
+function createDots() {
+  dotsContainer.innerHTML = "";
+  dots = [];
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      showSlide(i);
+    });
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  });
+}
 
 function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
@@ -38,14 +53,10 @@ function showSlide(n) {
   });
 }
 
-// Cambiar slide con puntos
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    showSlide(i);
-  });
-});
+// Flechas
+const prevArrow = document.querySelector(".prev");
+const nextArrow = document.querySelector(".next");
 
-// Cambiar slide con flechas
 prevArrow.addEventListener("click", () => {
   showSlide(slideIndex - 1);
 });
@@ -53,10 +64,11 @@ nextArrow.addEventListener("click", () => {
   showSlide(slideIndex + 1);
 });
 
-// Cambio automático cada 5 segundos
+// Cambio automático cada 5s
 setInterval(() => {
   showSlide(slideIndex + 1);
 }, 5000);
 
 // Inicializar
+createDots();
 showSlide(slideIndex);
