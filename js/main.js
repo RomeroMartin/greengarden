@@ -19,6 +19,7 @@ mobileLinks.forEach(link => {
   });
 });
 
+
 // ==== BANNER ==== //
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");

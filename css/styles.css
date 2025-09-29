@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-
 /* Scroll suave en toda la web */
 html {
   scroll-behavior: smooth;
@@ -11,6 +10,11 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Variable altura navbar */
+:root {
+  --nav-h: 12vh;
 }
 
 /* Fuente global */
@@ -31,7 +35,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 12vh;
+  height: var(--nav-h);
 }
 
 .logo img {
@@ -64,7 +68,7 @@ body {
 /* Iconos escritorio */
 .nav-icons {
   display: flex;
-  gap: 1.5rem; /* <- aumentado para mejor separación y para futuros íconos */
+  gap: 1rem;
 }
 
 .nav-icons img {
@@ -152,10 +156,8 @@ body {
 /* Redes sociales en menú mobile */
 .social {
   margin-top: 2rem;
-  display: flex;               /* <-- agregado para que los íconos queden en fila en mobile */
-  gap: 1.5rem;                 /* <-- separación consistente y preparada para más íconos */
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  gap: 1.5rem; /* separación entre iconos en mobile */
 }
 
 .social img {
@@ -290,7 +292,6 @@ body {
 .next {
   right: 25px;
 }
-
 
 /* ============================= */
 /* SECCIÓN MENÚ */
@@ -472,3 +473,70 @@ body {
     margin: 0 auto;
   }
 }
+
+/* ============================= */
+/* Reglas específicas para menu.html y menumerienda.html */
+/* ============================= */
+
+/* contenedor principal: dejamos padding-top para que el navbar fijo no tape contenido */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 1rem) 2rem 4rem;
+}
+
+/* título centrado */
+.contenedor h1 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* galería de páginas: apiladas verticalmente y centradas */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* cada enlace ocupa el ancho máximo permitido y el img se centra dentro */
+.galeria a {
+  display: block;
+  width: 100%;
+  max-width: 1000px; /* límite visual */
+  text-align: center;
+}
+
+/* imagenes del menú:
+   - se adaptan al alto disponible: max-height resta la altura del navbar y un margen extra
+   - object-fit: contain para que se vea completa sin recorte
+*/
+.galeria img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - var(--nav-h) - 4rem);
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* en pantallas pequeñas queremos que las imágenes llenen más (pero sin pasar del alto) */
+@media (max-width: 900px) {
+  .contenedor {
+    padding: calc(var(--nav-h) + 0.75rem) 1rem 3rem;
+  }
+
+  .galeria img {
+    max-height: calc(85vh - var(--nav-h));
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
