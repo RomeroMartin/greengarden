@@ -540,3 +540,65 @@ body {
   }
 }
 
+/* ==== LIGHTBOX FIX ==== */
+.glightbox-clean .gclose, 
+.glightbox-clean .gnext, 
+.glightbox-clean .gprev {
+  opacity: 1 !important;        /* siempre visibles */
+  visibility: visible !important;
+  color: black !important;      /* iconos en negro */
+  text-shadow: none !important; /* sin sombras raras */
+  background: none !important;  /* sin fondo */
+  font-size: 32px !important;   /* tamaño grande y claro */
+  z-index: 9999 !important;
+}
+
+/* ajustar la cruz arriba a la derecha */
+.glightbox-clean .gclose {
+  top: 15px !important;
+  right: 15px !important;
+}
+
+/* flechas laterales centradas */
+.glightbox-clean .gnext, 
+.glightbox-clean .gprev {
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+/* espaciado entre contenido y flechas */
+.glightbox-clean .gnext {
+  right: 25px !important;
+}
+.glightbox-clean .gprev {
+  left: 25px !important;
+}
+
+/* ==== FIX GLIGHTBOX: asegurar que cruz y flechas estén visibles ==== */
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #111 !important;
+  background: none !important;
+  text-shadow: none !important;
+  z-index: 99999 !important;
+}
+
+/* Acomodar posición y tamaño */
+.glightbox-clean .gclose {
+  top: 16px !important;
+  right: 16px !important;
+  font-size: 28px !important;
+}
+
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 36px !important;
+}
+
+.glightbox-clean .gnext { right: 24px !important; }
+.glightbox-clean .gprev { left: 24px !important; }

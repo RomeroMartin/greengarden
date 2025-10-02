@@ -30,6 +30,9 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Agregar (GLightbox CSS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -179,6 +182,22 @@
       </a>
     </section>
   </main>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Inicializar GLightbox -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        loop: true,
+        touchNavigation: true,
+        keyboardNavigation: true,
+        closeOnOutsideClick: true
+     });
+    });
+  </script>
 
   <script src="js/main.js"></script>
 </body>
