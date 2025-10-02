@@ -13,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Green Garden - Nuestra casa, tu lugar.">
-  <meta property="og:description" content="Platos caseros, sabores frescos y un ambiente único en Córdoba.">
+  <meta property="og:description" content="Platos caseros, sabores frescos y un ambiente único en La Plata.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://greengarden.com.ar">
   <meta property="og:image" content="https://greengarden.com.ar/GreenGarden/img/Logo.png">
@@ -30,6 +30,9 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Agregar (GLightbox CSS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
@@ -40,87 +43,66 @@
   </script>
 </head>
 
-  <body>
-    <header class="header" role="banner">
-      <img src="img/logo.png" alt="Logo de Green Garden" class="logo" />
-    </header>
-
-    <main class="contenedor" role="main">
-      <a href="index.html" class="volver">← Volver al inicio</a>
-      <h1>Reglamento del Playroom</h1>
-
-      <section class="galeria" aria-label="Imagen del reglamento">
-        <a href="img/reglamento/reglamento.webp" class="glightbox" data-gallery="reglamento">
-          <img src="img/reglamento/reglamento.webp" alt="Reglamento del Playroom" tabindex="0" />
-        </a>
-      </section>
-
-      <!-- INSTRUCTIVO -->
-      <section class="reglamento-section instructivo">
-        <h2 class="titulo-principal">Instructivo de Acceso a Cámaras</h2>
-        <p>Conéctate a nuestro wifi <strong>"Green garden"</strong>.</p>
-        <p><strong>Presioná el botón que se encuentra más abajo.</strong></p>
-        <p>Ingresá usuario y contraseña:</p>
-        <p><strong>USUARIO:</strong> <span>camaras</span></p>
-        <p><strong>CONTRASEÑA:</strong> <span>green</span></p>
-        <p>Una vez ingresados los datos, se mostrará una pantalla en negro. Tocá el ícono cuadrado en la parte superior izquierda para comenzar a ver las cámaras.</p>
-      </section>
-
-      <!-- BOTÓN CÁMARAS -->
-      <div class="botones boton-camaras">
-        <a href="http://camaras.greengarden.com/" target="_blank" rel="noopener noreferrer" class="boton">
-          <span class="boton-texto">Cámaras Playroom</span>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Green Garden Logo">
         </a>
       </div>
-    </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="footer-contenido">
-        <div class="footer-izquierda">
-          <a href="tel:02214895239" class="footer-item">
-            <img src="img/icons/phone.svg" alt="Teléfono" class="icono" />
-            Reservas al: 0221-4895239
-          </a>
-          <a href="mailto:greengardenlaplata@gmail.com" class="footer-item">
-            <img src="img/icons/mail.svg" alt="Correo electrónico" class="icono" />
-            greengardenlaplata@gmail.com
-          </a>
-          <a
-            href="https://instagram.com/greengardenlaplata"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-item"
-          >
-            <img src="img/icons/instagram.svg" alt="Instagram" class="icono" />
-            @greengardenlaplata
-          </a>
-        </div>
+      <!-- Menú escritorio -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#playroom">Playroom</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#aliados">Aliados</a></li>
+      </ul>
 
-        <div class="footer-derecha">
-          <p>&copy; 2025 Green Garden.</p>
-          <p>Desarrollado por Romero Martin</p>
-        </div>
+      <!-- Iconos escritorio -->
+      <div class="nav-icons">
+        <a href="https://www.instagram.com/greengardenlaplata/#" target="_blank">
+          <img src="img/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.google.com/search?q=green+garden+la+plata&sca_esv=5950ff312d9797ee&sxsrf=AE3TifMdWDb0ui7uewYCniIhHuRZmSBI2Q%3A1759155703713&ei=95XaaLCnK-HZ1sQPttnRqAw&ved=0ahUKEwjw_svWlf6PAxXhrJUCHbZsFMUQ4dUDCBA&uact=5&oq=green+garden+la+plata&gs_lp=Egxnd3Mtd2l6LXNlcnAiFWdyZWVuIGdhcmRlbiBsYSBwbGF0YTIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYR0i1DVCdCVidCXABeAGQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgGgAgOYAwCIBgGQBgiSBwExoAcAsgcAuAcAwgcDMC4xyAcC&sclient=gws-wiz-serp" target="_blank">
+          <img src="img/icons/google.svg" alt="Google">
+        </a>
       </div>
 
-      <div itemscope itemtype="https://schema.org/Restaurant" style="display: none;">
-        <meta itemprop="name" content="Green Garden" />
-        <meta itemprop="address" content="La Plata, Buenos Aires, Argentina" />
-        <meta itemprop="telephone" content="+54-221-4895239" />
-        <meta itemprop="servesCuisine" content="Comida como en casa" />
-        <meta itemprop="url" content="https://romeromartin.github.io/GreenGarden2/" />
+      <!-- Botón hamburguesa -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </nav>
 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script>
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-        loop: true,
-        touchNavigation: true,
-        keyboardNavigation: true,
-        closeOnOutsideClick: true
-      });
-    </script>
-  </body>
-</html>
+    <!-- Menú móvil -->
+    <div class="mobile-menu">
+      <button class="close-btn">×</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#playroom">Playroom</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#aliados">Aliados</a></li>
+      </ul>
+      <!-- Íconos sociales -->
+      <div class="social">
+        <a href="https://www.instagram.com/greengardenlaplata/#" target="_blank">
+          <img src="img/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.google.com/search?q=green+garden+la+plata&sca_esv=5950ff312d9797ee&sxsrf=AE3TifMdWDb0ui7uewYCniIhHuRZmSBI2Q%3A1759155703713&ei=95XaaLCnK-HZ1sQPttnRqAw&ved=0ahUKEwjw_svWlf6PAxXhrJUCHbZsFMUQ4dUDCBA&uact=5&oq=green+garden+la+plata&gs_lp=Egxnd3Mtd2l6LXNlcnAiFWdyZWVuIGdhcmRlbiBsYSBwbGF0YTIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYR0i1DVCdCVidCXABeAGQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgGgAgOYAwCIBgGQBgiSBwExoAcAsgcAuAcAwgcDMC4xyAcC&sclient=gws-wiz-serp" target="_blank">
+          <img src="img/icons/google.svg" alt="Google">
+        </a>
+      </div>
+      <!-- Logo al fondo -->
+      <div class="mobile-logo">
+        <img src="img/logo.png" alt="Green Garden Logo">
+      </div>
+    </div>
+  </header>
