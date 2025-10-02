@@ -26,7 +26,6 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25); /* más transparente */
@@ -38,6 +37,10 @@ body {
   height: var(--nav-h);
 }
 
+/* Logo */
+.logo {
+  flex: 1;
+}
 .logo img {
   height: 90px;
   max-height: 100px;
@@ -49,7 +52,7 @@ body {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  flex: 1;
+  flex: 2; /* 🔑 da más espacio al menú */
 }
 
 .nav-links li a {
@@ -67,7 +70,9 @@ body {
 
 /* Iconos escritorio */
 .nav-icons {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
@@ -82,6 +87,7 @@ body {
   filter: invert(29%) sepia(91%) saturate(355%) hue-rotate(76deg) brightness(93%) contrast(92%);
   transform: scale(1.1);
 }
+
 
 /* Botón hamburguesa */
 .hamburger {
