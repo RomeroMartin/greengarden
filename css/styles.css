@@ -624,31 +624,30 @@ body {
   color: #333;
 }
 
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 3rem;
-}
-
 .carousel {
   overflow: hidden;
   width: 100%;
   padding: 2rem 0;
 }
 
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .carousel-track {
   display: flex;
   gap: 1.5rem;
-  animation: scroll-carousel 30s linear infinite;
+  will-change: transform;
 }
 
 .carousel-track img {
-  width: 250px;   /* Ajustá este valor según quieras el tamaño */
-  height: auto;
+  width: 250px;
   border-radius: 10px;
   object-fit: cover;
 }
+
 
 @keyframes scroll-carousel {
   0%   { transform: translateX(0); }

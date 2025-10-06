@@ -73,3 +73,36 @@ setInterval(() => {
 // Inicializar
 createDots();
 showSlide(slideIndex);
+
+
+// ==== CARRUSEL INFINITO ==== //
+const track = document.querySelector('.carousel-track');
+const carouselSlides = Array.from(track.children);
+
+// Clonamos las imágenes para crear un bucle continuo
+carouselSlides.forEach(slide => {
+  const clone = slide.cloneNode(true);
+  track.appendChild(clone);
+});
+
+let position = 0;
+const speed = 0.5; // mayor valor = más rápido
+
+function moveCarousel() {
+  position -= speed;
+  const totalWidth = carouselSlides.reduce((acc, img) => acc + img.offsetWidth + 24, 0); // ancho total (24px = gap)
+  
+  // Si se desplazó más del ancho original, reseteamos sin transición
+  if (Math.abs(position) >= totalWidth) {
+    position = 0;
+    track.style.transition = 'none';
+  } else {
+    track.style.transition = 'transform 0.01s linear';
+  }
+
+  track.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(moveCarousel);
+}
+
+// Esperar a que carguen las imágenes antes de iniciar
+window.addEventListener('load', moveCarousel);
