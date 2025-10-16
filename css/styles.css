@@ -670,7 +670,7 @@ body {
   margin-top: 2rem;
   max-width: 380px;
   flex: 1;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -724,3 +724,103 @@ body {
   }
 }
 
+/* ============================= */
+/* SECCIÓN ALIADOS */
+/* ============================= */
+#aliados {
+  padding: 80px 20px;
+  background: #faf8f5;
+  text-align: center;
+}
+
+#aliados h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.aliados-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.aliados-logos img {
+  height: 80px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.aliados-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+  background-color:#57a348;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+footer .social {
+  margin: 20px 0;
+}
+
+footer .social a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  color: #ffce54;
+}
+
+/* ============================= */
+/* SCROLL SUAVE GLOBAL */
+/* ============================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================= */
+/* RESPONSIVE ALIADOS */
+/* ============================= */
+@media (max-width: 900px) {
+  .aliados-logos {
+    gap: 25px;
+  }
+
+  .aliados-logos img {
+    height: 60px;
+  }
+
+  footer img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+}
