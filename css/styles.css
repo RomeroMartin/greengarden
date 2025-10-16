@@ -820,7 +820,65 @@ html {
   }
 
   footer img {
-  height: 60px;
+  height: 70px;
   margin-bottom: 20px;
 }
 }
+
+/* =========================
+   SECCIÓN ALIADOS
+========================= */
+.aliados-section {
+  padding: 60px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.aliados-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.aliados-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: scrollAliados 15s linear infinite;
+}
+
+.aliados-track img {
+  height: 100px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.aliados-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* animación infinita igual al carrusel del menú */
+@keyframes scrollAliados {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* versión responsive */
+@media (max-width: 768px) {
+  .aliados-track {
+    gap: 30px;
+    animation-duration: 20s;
+  }
+
+  .aliados-track img {
+    height: 50px;
+  }
+}
+
