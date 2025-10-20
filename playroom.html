@@ -103,8 +103,80 @@
       </div>
     </div>
   </header>
-  
-  <!-- Script -->
-  <script src="js/main.js"></script>
+  <main class="contenedor" role="main" id="playroom">
+    <h1>Bienvenidos a nuestro Playroom</h1>
 
+    <div class="playroom-buttons">
+      <a href="#" class="btn-menu galeria-btn" id="openGallery">Ver galería</a>
+    </div>
+
+    <p>
+      Nuestro espacio de juegos dedicado exclusivamente a nuestros comensales más chicos.  
+      Para garantizar su felicidad, la seguridad es muy importante, por ello les pedimos que conozcan nuestras normativas antes de entrar:
+    </p>
+
+    <ul class="reglamento-lista">
+      <li>Los niños ingresan solo acompañados por un adulto responsable que debe estar ocupando una mesa del restaurante.</li>
+      <li>Pueden ingresar chicos desde los 3 años de edad hasta los 10 años.</li>
+      <li>Los niños serán ingresados y retirados por el adulto con identificación (pulsera), sin excepción.</li>
+      <li>No se permite ingresar juguetes, comida, bebida o cualquier otro elemento ajeno a la sala.</li>
+      <li>No podrán retirar a un niño sin su pulsera ni elementos de la mesa.</li>
+      <li>Los niños que deseen ir al baño deben estar acompañados por sus padres.</li>
+      <li>Dentro de la sala las actividades son reguladas para garantizar la seguridad de todos.</li>
+      <li>Los responsables serán llamados a retirar a los niños si estos no respetan las normas o comportamientos adecuados.</li>
+      <li>La capacidad máxima es de 30 niños. Si se supera, deberán esperar su turno.</li>
+      <li>El costo por hora es de $2200 e incluye el servicio de playroom.</li>
+    </ul>
+
+    <p>Este espacio fue creado exclusivamente para el entretenimiento de los niños mientras disfrutan de una salida en familia.  
+    Agradecemos su comprensión y colaboración.</p>
+
+    <!-- GALERÍA LIGHTBOX -->
+    <div id="gallery" style="display:none;">
+      <a href="img/playroom/play1.webp" class="glightbox-gallery" data-gallery="playroom"><img src="img/play1.webp" alt="Playroom 1"></a>
+      <a href="img/playroom/play2.webp" class="glightbox-gallery" data-gallery="playroom"><img src="img/play2.webp" alt="Playroom 2"></a>
+      <a href="img/playroom/play3.webp" class="glightbox-gallery" data-gallery="playroom"><img src="img/play3.webp" alt="Playroom 3"></a>
+      <a href="img/playroom/play4.webp" class="glightbox-gallery" data-gallery="playroom"><img src="img/play4.webp" alt="Playroom 4"></a>
+    </div>
+
+    <!-- INSTRUCTIVO -->
+    <section id="instructivo" class="instructivo-section">
+      <h2>Instructivo para conectarse a las cámaras</h2>
+      <ol>
+        <li>Conectate al wifi <strong>"Green garden"</strong>.</li>
+        <li>Presioná el botón que se encuentra más abajo.</li>
+        <li>Ingresá los siguientes datos:<br>
+          <strong>Usuario:</strong> camaras<br>
+          <strong>Contraseña:</strong> green
+        </li>
+        <li>Una vez dentro, tocá el ícono cuadrado arriba a la izquierda para comenzar a ver las cámaras.</li>
+      </ol>
+      <div class="boton-camaras">
+        <a href="http://camaras.greengarden.com/" target="_blank" class="btn-menu">Conectarse a Cámaras</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="img/logo.png" alt="Logo Green Garden">
+      <p>© 2025 Green Garden. Todos los derechos reservados.</p>
+      <div class="social">
+        <a href="https://www.instagram.com/greengardenlaplata/" target="_blank"><img src="img/icons/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.google.com/search?q=green+garden+la+plata" target="_blank"><img src="img/icons/google.svg" alt="Google"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Inicializar galería
+    document.getElementById("openGallery").addEventListener("click", (e) => {
+      e.preventDefault();
+      const lightbox = GLightbox({ selector: '.glightbox-gallery', loop: true });
+      lightbox.open();
+    });
+  </script>
 </body>
+</html>
