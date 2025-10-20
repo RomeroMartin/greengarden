@@ -88,6 +88,9 @@ body {
   transform: scale(1.1);
 }
 
+section[id] {
+  scroll-margin-top: 13vh; /* deja el título visible debajo del navbar */
+}
 
 /* Botón hamburguesa */
 .hamburger {
@@ -481,7 +484,7 @@ body {
 }
 
 /* ============================= */
-/* Reglas específicas para menu.html y menumerienda.html */
+/* Reglas específicas para menu.html
 /* ============================= */
 
 /* contenedor principal: dejamos padding-top para que el navbar fijo no tape contenido */
@@ -530,6 +533,10 @@ body {
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+#menumerienda {
+  margin-top: 100px;
 }
 
 /* en pantallas pequeñas queremos que las imágenes llenen más (pero sin pasar del alto) */
@@ -874,7 +881,7 @@ html {
 @media (max-width: 768px) {
   .aliados-track {
     gap: 30px;
-    animation-duration: 20s;
+    animation-duration: 15s;
   }
 
   .aliados-track img {
