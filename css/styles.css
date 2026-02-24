@@ -943,5 +943,110 @@ html {
     position: relative;
     top: 2px; /* 🔥 baja el icono apenas */
   }
-
 }
+
+/* ============================= */
+/* PLAYROOM */
+/* ============================= */
+
+#playroom {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px; /* compensa la altura del nav */
+}
+
+#playroom h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2f2f2f;
+}
+
+/* BOTÓN GALERÍA CENTRADO */
+
+.playroom-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.playroom-buttons .btn-menu {
+  min-width: 220px;
+}
+
+/* TARJETAS (reglamento + instructivo) */
+
+/* TITULOS TARJETAS */
+
+.reglamento h2,
+.instructivo-section h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000; /* negro como pediste */
+  text-align: center;
+}
+
+/* TEXTOS */
+
+.reglamento p,
+.reglamento li,
+.instructivo-section li {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* LISTAS */
+
+.reglamento-lista {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.reglamento-lista li {
+  margin-bottom: 12px;
+}
+
+/* LISTA ORDENADA INSTRUCTIVO */
+
+.instructivo-section ol {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.instructivo-section li {
+  margin-bottom: 10px;
+}
+
+/* BOTÓN CÁMARAS CENTRADO */
+
+.boton-camaras {
+  display: flex;
+  justify-content: center;
+}
+
+.boton-camaras .btn-menu {
+  min-width: 240px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+  #playroom {
+    padding: 40px 15px;
+  }
+
+  #playroom h1 {
+    font-size: 26px;
+  }
+
+  .reglamento,
+  .instructivo-section {
+    padding: 25px;
+  }
+  }
