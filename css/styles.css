@@ -980,6 +980,16 @@ html {
 
 /* TITULOS TARJETAS */
 
+.reglamento,
+.instructivo-section {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .reglamento h2,
 .instructivo-section h2 {
   font-family: 'Nunito', sans-serif;
@@ -1039,6 +1049,7 @@ html {
 
   #playroom {
     padding: 40px 15px;
+    padding-top: 120px; /* más espacio para el nav móvil */
   }
 
   #playroom h1 {
