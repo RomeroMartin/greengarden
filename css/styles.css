@@ -767,44 +767,84 @@ section[id] {
 }
 
 /* ============================= */
-/* FOOTER */
+/* FOOTER NUEVO (ESTILO ORIGINAL) */
 /* ============================= */
-footer {
-  background-color:#57a348;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
+
+.footer {
+  background-color: #57a348; /* verde nuevo */
+  color: #ffffff;
+  padding: 18px 0;
+  font-size: 14px;
+  margin-top: auto;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer .footer-content {
+.footer-contenido {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-footer img {
-  height: 100px;
-  margin-bottom: 20px;
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-footer p {
-  margin: 10px 0;
-  font-size: 0.95rem;
-  color: #bbb;
+.footer-derecha {
+  text-align: right;
+  color: #ffffff;
+  font-size: 14px;
 }
 
-footer .social {
-  margin: 20px 0;
+.footer-item {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  gap: 8px;
+  transition: opacity 0.3s ease;
 }
 
-footer .social a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.3rem;
-  transition: 0.3s;
+.footer-item:hover {
+  opacity: 0.8;
 }
 
-footer .social a:hover {
-  color: #ffce54;
+.icono {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* blancos */
+}
+
+/* Responsive igual al original */
+@media (max-width: 768px) {
+  .footer-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-izquierda,
+  .footer-derecha {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-derecha {
+    margin-top: 15px;
+  }
+
+  .footer-item {
+    justify-content: center;
+  }
 }
 
 /* ============================= */
@@ -887,5 +927,21 @@ html {
   .aliados-track img {
     height: 50px;
   }
-}
 
+}
+/* Ajuste fino alineación iconos mobile */
+@media (max-width: 768px) {
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .icono {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 2px; /* 🔥 baja el icono apenas */
+  }
+
+}
