@@ -1061,3 +1061,60 @@ html {
     padding: 25px;
   }
   }
+
+  /* ============================= */
+/* NOSOTROS */
+/* ============================= */
+
+#nosotros {
+  padding: 120px 20px 80px; /* compensa navbar fijo */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nosotros-card {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.nosotros-card h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.nosotros-card p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 22px;
+  text-align: justify; /* 🔥 texto justificado como pediste */
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  #nosotros {
+    padding: 120px 15px 60px;
+  }
+
+  .nosotros-card {
+    padding: 30px;
+  }
+
+  .nosotros-card h1 {
+    font-size: 26px;
+  }
+
+  .nosotros-card p {
+    font-size: 15px;
+  }
+
+}
